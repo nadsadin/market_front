@@ -324,3 +324,22 @@ input[type="radio"].hidden,input[type="checkbox"].hidden {
     }
   }
 }
+
+.breadcrumb{
+  font-size: 11px;
+  &-item{
+    a{
+      color: $primary-color;
+      &:hover, :focus{
+        color: #002a7b !important;
+      }
+    }
+  }
+}
+.breadcrumb-item+.breadcrumb-item::before{
+  content: '—';
+  color: #757575;
+}
+.ui-star>*:first-child{
+  color: rgba($primary-color, 0.5);
+}
