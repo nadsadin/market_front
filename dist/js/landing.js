@@ -35,19 +35,20 @@ $(function() {
 
   var shopPriceFilterVal = [ 5, 1000 ];
 
+  numeral.locales['ru']["currency"]["symbol"] = "₽";
+  numeral.locale('ru');
   $('#shop-price-slider').each(function() {
     noUiSlider.create(this, {
       start: shopPriceFilterVal,
       connect: true,
       tooltips: true,
-      direction: isRtl ? 'rtl' : 'ltr',
       range: {
         'min': 5,
         'max': 1000,
       },
       format: {
         to: function (value) {
-          return numeral(value).format('$0');
+          return numeral(value).format('0&nbsp;$');
         },
         from: function (value) {
           return value.replace(/[\$\,]/g, '');
