@@ -62,6 +62,10 @@ body {
   background-color: #E5E5E5;
 }
 
+// Badge
+
+@include appwork-badge-outline-variant('.badge-outline-warning', #C78446);
+
 // Footer
 
 @include appwork-footer-variant('.bg-footer-theme', #FFFFFF, $color: $text-muted, $active-color: $primary-color);
